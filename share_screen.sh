@@ -1,4 +1,6 @@
 #!/bin/sh
+# This script uses ffmpeg to stream main monitor to the interactive learning system on linux systems.
+# Obviously ITS can't make the universities learning system compatible with linux...
 
 if [ "$#" -ne 1 ]; then
     echo "USAGE: $0 <ip address>" >&2

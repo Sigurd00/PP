@@ -1,4 +1,3 @@
-import Control.Monad (when)
 second xs = xs !! 1
 
 allbutsecond (x:_:xs) = x : xs

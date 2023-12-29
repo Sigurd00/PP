@@ -1,4 +1,5 @@
 -- This is the simple program from the slides from the introduction
+-- This is also session 1
 
 laengde :: (Num p) => [a] -> p
 
