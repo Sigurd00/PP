@@ -24,4 +24,11 @@ isolate (y:ys) x
     | y == x    = let (l1, l2) = isolate ys x in (l1, y : l2) -- if y == x then y goes into list l2
     | otherwise = let (l1, l2) = isolate ys x in (y : l1, l2) -- otherwise y goes into list l1
 
-wrapup :: Eq a =>
+wrapup :: Eq a => [a] -> [[a]]
+wrapup [] = []
+wrapup [x] = [[x]]
+wrapup (x:xs) = if x == h
+                then (x:fst):rst
+                else [x] : (fst:rst)
+                where fst:rst = wrapup xs
+                      (h:t) = fst
